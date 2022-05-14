@@ -14,16 +14,6 @@
     "body": ["style={{ $1 }}"],
     "description": "react style attribute"
   },
-  "text ellipsis": {
-    "prefix": "els",
-    "body": [
-      "white-space: nowrap;",
-      "text-overflow: ellipsis;",
-      "overflow: hidden;",
-      "max-width: 10em;"
-    ],
-    "description": "css ellipsis"
-  },
   "useState": {
     "prefix": "us",
     "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0"],
@@ -35,7 +25,7 @@
     "description": "React useEffect() hook"
   },
   "useCallback": {
-    "prefix": "uc",
+    "prefix": "uk",
     "body": ["const $1 = useCallback(() => {", "\t$2", "\t},[$3],", ");$0"],
     "description": "React useCallback() hook"
   },
@@ -45,12 +35,16 @@
     "description": "React useMemo() hook"
   },
   "useRef": {
-    "prefix": "ur",
+    "prefix": "uf",
     "body": ["const $1 = useRef($2);$0"],
     "description": "React useRef() hook"
   },
   "import from": {
-    "prefix": "imf",
+    "prefix": "if",
+    "body": ["import { $1 } from '$2$1';"]
+  },
+  "import from with default": {
+    "prefix": "ifd",
     "body": ["import $1 from '$2$1';"]
   },
   "import react": {
@@ -86,53 +80,66 @@
   "event prevent default and stop prapagation": {
     "prefix": "esp",
     "body": ["e.stopPropagation();", "e.preventDefault();"]
+  },
+  "react component template": {
+    "prefix": "rct",
+    "body": [
+      "import styles from './index.module.less';",
+      "\t\t",
+      "const ${1:FC} = () => {",
+      "\treturn (",
+      "\t\t<div className={styles.wrap}>",
+      "\t\t\t $2",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "export default R${1:FC};"
+    ]
+  },
+  "react component template with memo": {
+    "prefix": "rctm",
+    "body": [
+      "import React from 'react';",
+      "import styles from './index.module.less';",
+      "\t\t",
+      "const ${1:FC} = () => {",
+      "\treturn (",
+      "\t\t<div className={styles.wrap}>",
+      "\t\t\t $2",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "export default React.memo(${1:FC});"
+    ]
+  },
+  "redux component template": {
+    "prefix": "imdt",
+    "body": [
+      "import React from 'react';",
+      "import styles from './index.module.less';",
+      "import { useDispatch, useSelector } from 'react-redux';",
+      "import { Dispatch, iRootState } from '../store';",
+      "interface Props {",
+      "\t",
+      "}",
+      "const ${1:FC} = (props: Props) => {",
+      "\tconst dispatch = useDispatch<Dispatch>();",
+      "\tconst $2 = useSelector((state: iRootState) => state.$3);",
+      "\treturn (",
+      "\t\t",
+      "\t);",
+      "};",
+      "export default React.memo(${1:FC});"
+    ]
+  },
+  "text ellipsis": {
+    "prefix": "els",
+    "body": [
+      "white-space: nowrap;",
+      "text-overflow: ellipsis;",
+      "overflow: hidden;",
+      "max-width: 10em;"
+    ],
+    "description": "css ellipsis"
   }
-  // "react component template": {
-  //   "prefix": "imt",
-  //   "body": [
-  //     "import React from 'react';",
-  //     "import styles from './index.module.less';",
-  //     "interface Props {",
-  //     "\t$2",
-  //     "}",
-  //     "const ${1:FC} = (props: Props) => {",
-  //     "\treturn (",
-  //     "\t\t",
-  //     "\t);",
-  //     "};",
-  //     "export default React.memo(${1:FC});"
-  //   ]
-  // },
-  // "redux component template": {
-  //   "prefix": "imdt",
-  //   "body": [
-  //     "import React from 'react';",
-  //     "import styles from './index.module.less';",
-  //     "import { useDispatch, useSelector } from 'react-redux';",
-  //     "import { Dispatch, iRootState } from '../store';",
-  //     "interface Props {",
-  //     "\t",
-  //     "}",
-  //     "const ${1:FC} = (props: Props) => {",
-  //     "\tconst dispatch = useDispatch<Dispatch>();",
-  //     "\tconst $2 = useSelector((state: iRootState) => state.$3);",
-  //     "\treturn (",
-  //     "\t\t",
-  //     "\t);",
-  //     "};",
-  //     "export default React.memo(${1:FC});"
-  //   ]
-  // },
-  // "unstated-next container template": {
-  //   "prefix": "imut",
-  //   "body": [
-  //     "import { useState } from 'react';",
-  //     "import { createContainer } from 'unstated-next';",
-  //     "function useCounter() {",
-  //     "\tconst [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<any>($2);",
-  //     "\treturn { ${1}, set${1/(.*)/${1:/capitalize}/} };",
-  //     "};",
-  //     "export default createContainer(useCounter);"
-  //   ]
-  // }
 }
