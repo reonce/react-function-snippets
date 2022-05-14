@@ -1,0 +1,58 @@
+{
+  "name": "react-function-snippets",
+  "displayName": "React Function Snippets",
+  "description": "Code snippets for React Function Module",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "publisher": "reonce",
+  "author": {
+    "name": "reonce",
+    "email": "reonce@qq.com",
+    "url": "https://github.com/reonce/react-function-snippets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reonce/react-function-snippets"
+  },
+  "keywords": [
+    "react",
+    "function",
+    "jsx",
+    "hooks",
+    "javascript"
+  ],
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "less",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
