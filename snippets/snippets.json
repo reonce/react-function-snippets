@@ -30,7 +30,7 @@
     "description": "React useEffect() hook"
   },
   "useCallback": {
-    "prefix": "uk",
+    "prefix": "uc",
     "body": ["const $1 = useCallback(() => {", "\t$2", "\t},[$3],", ");$0"],
     "description": "React useCallback() hook"
   },

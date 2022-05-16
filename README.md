@@ -14,7 +14,7 @@
 | `esp`   | `e.stopPropagation(); e.preventDefault();`                 |
 | `us`    | `const [$1,set$1] = useState($2);`                         |
 | `ue`    | `useEffect` template                                       |
-| `uk`    | `useCallback` template                                     |
+| `uc`    | `useCallback` template                                     |
 | `um`    | `useMemo` template                                         |
 | `uf`    | `const $1 = useRef(${2:null})`                             |
 | `ifo`   | `import { $1 } from '$2'` import { a } from b              |
