@@ -20,7 +20,7 @@
     "description": "react style attribute"
   },
   "useState": {
-    "prefix": "us",
+    "prefix": "cus",
     "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0"],
     "description": "React useState() hook"
   },
@@ -44,13 +44,13 @@
     "body": ["const $1 = useRef($2);$0"],
     "description": "React useRef() hook"
   },
-  "import from": {
-    "prefix": "ifo",
-    "body": ["import { $1 } from '$2$1';"]
-  },
   "import from with default": {
     "prefix": "ifd",
     "body": ["import $1 from '$2$1';"]
+  },
+  "import from": {
+    "prefix": "ifo",
+    "body": ["import { $1 } from '$2$1';"]
   },
   "import react": {
     "prefix": "ir",

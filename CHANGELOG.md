@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.4] - 2022-5-16
 - fix rct --> React Template
+- fix README.MD
+- update us --> cus
 
 ## [1.0.3] - 2022-5-16
 - fix readme
