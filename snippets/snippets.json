@@ -108,7 +108,7 @@
       "\t\t</div>",
       "\t);",
       "};",
-      "export default R${1:FC};"
+      "export default ${1:FC};"
     ]
   },
   "react component template with memo": {
