@@ -1,8 +1,9 @@
 # React Function Snippets
 
-A minimalist VSCode template plug-in, designed to be concise syntax.
-一个极简的VSCode模板插件，设计原则是极简语法 
-After the installation, run the following command in the JS file, CSS file, or extended file (such as TSX and less).
+A minimalist VSCode template plug-in, designed to be concise syntax.<br/>
+一个极简的VSCode模板插件，设计原则是极简语法 <br/>
+
+After the installation, run the following command in the JS file, CSS file, or extended file (such as TSX and less).<br/>
 安装后，在js、css文件及拓展文件(tsx、less等)中输入以下命令使用
 ## Supported Snippets
 
