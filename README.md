@@ -22,10 +22,9 @@
 | `ir`    | `import * as React from 'react';`                          |
 | `irc`   | `import React, { xx } from 'react';`                       |
 | `ifd`   | `import { useSelector, useDispatch } from 'react-redux';`  |
-| `ifa`   | `import { xx } from 'antd';`                               |
+| `iac`   | `import { $1 } from 'antd';$0` import { } from antd        |
 | `ics`   | `import classNames from 'classnames';`                     |
 | `isg`   | `import { ReactComponent as $1Svg } from '$1.svg';`        |
-| `v-`    | `var(--$1);` css vars                                      |
 | `els`   | `css text-overflow: ellipsis`                              |
 | `csg`   | `& :global($1){$2};` cover styles with global              |
 | `esp`   | `e.stopPropagation(); && e.preventDefault();`              |

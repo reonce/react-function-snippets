@@ -1,5 +1,10 @@
 {
   "console.log": {
+    "prefix": "cl",
+    "body": ["console.log($0);"],
+    "description": "console.log"
+  },
+  "console.log with construction": {
     "prefix": "clo",
     "body": ["console.log({$0});"],
     "description": "console.log with construction object"
@@ -40,7 +45,7 @@
     "description": "React useRef() hook"
   },
   "import from": {
-    "prefix": "if",
+    "prefix": "ifo",
     "body": ["import { $1 } from '$2$1';"]
   },
   "import from with default": {
@@ -48,19 +53,19 @@
     "body": ["import $1 from '$2$1';"]
   },
   "import react": {
-    "prefix": "imr",
+    "prefix": "ir",
     "body": ["import * as React from 'react';$0"]
   },
-  "import react hooks": {
-    "prefix": "irh",
+  "import react with construction": {
+    "prefix": "irc",
     "body": ["import React, { $1 } from 'react';$0"]
   },
   "import react-redux hooks": {
     "prefix": "ird",
     "body": ["import { useSelector, useDispatch } from 'react-redux';"]
   },
-  "antd": {
-    "prefix": "iad",
+  "import antd  with construction": {
+    "prefix": "iac",
     "body": ["import { $1 } from 'antd';$0"]
   },
   "import classnames": {
@@ -72,6 +77,16 @@
     "body": [
       "import { ReactComponent as ${1/(.*)/${1:/capitalize}/}Svg } from '$2$1.svg';$0"
     ]
+  },
+  "text ellipsis": {
+    "prefix": "els",
+    "body": [
+      "white-space: nowrap;",
+      "text-overflow: ellipsis;",
+      "overflow: hidden;",
+      "max-width: 10em;"
+    ],
+    "description": "css ellipsis"
   },
   "cover styles with global": {
     "prefix": "sgl",
@@ -131,15 +146,5 @@
       "};",
       "export default React.memo(${1:FC});"
     ]
-  },
-  "text ellipsis": {
-    "prefix": "els",
-    "body": [
-      "white-space: nowrap;",
-      "text-overflow: ellipsis;",
-      "overflow: hidden;",
-      "max-width: 10em;"
-    ],
-    "description": "css ellipsis"
   }
 }

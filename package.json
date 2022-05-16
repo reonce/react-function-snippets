@@ -2,8 +2,8 @@
   "name": "react-function-snippets",
   "displayName": "React Function Snippets",
   "description": "Code snippets for React Function Module",
-  "version": "1.0.2",
-  "icon": "icon.png",
+  "version": "1.0.3",
+  "icon": "./image/icon.png",
   "publisher": "reonce",
   "author": {
     "name": "reonce",
