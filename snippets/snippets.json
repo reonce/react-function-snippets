@@ -25,7 +25,7 @@
     "description": "React useState() hook"
   },
   "useEffect": {
-    "prefix": "ue",
+    "prefix": "uef",
     "body": ["useEffect(() => {", "\t$1", "}, [$2]);$0"],
     "description": "React useEffect() hook"
   },
@@ -44,20 +44,25 @@
     "body": ["const $1 = useRef($2);$0"],
     "description": "React useRef() hook"
   },
+  "useEvent": {
+    "prefix": "uet",
+    "body": ["const $1 = useEvent(() => {", "\t$2", "});$0"],
+    "description": "React useRef() hook"
+  },
   "import from with default": {
-    "prefix": "ifd",
+    "prefix": "im",
     "body": ["import $1 from '$2$1';"]
   },
-  "import from": {
-    "prefix": "ifo",
+  "import from with Object": {
+    "prefix": "imo",
     "body": ["import { $1 } from '$2$1';"]
   },
   "import react": {
-    "prefix": "ir",
+    "prefix": "imr",
     "body": ["import * as React from 'react';$0"]
   },
-  "import react with construction": {
-    "prefix": "irc",
+  "import react with object": {
+    "prefix": "iro",
     "body": ["import React, { $1 } from 'react';$0"]
   },
   "import react-redux hooks": {
@@ -65,8 +70,12 @@
     "body": ["import { useSelector, useDispatch } from 'react-redux';"]
   },
   "import antd  with construction": {
-    "prefix": "iac",
+    "prefix": "ima",
     "body": ["import { $1 } from 'antd';$0"]
+  },
+  "import module styles": {
+    "prefix": "ims",
+    "body": ["import styles from './index.module.less';$0"]
   },
   "import classnames": {
     "prefix": "ics",
