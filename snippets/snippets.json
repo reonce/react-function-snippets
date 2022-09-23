@@ -6,7 +6,7 @@
   },
   "console.log with construction": {
     "prefix": "clo",
-    "body": ["console.log({$0});"],
+    "body": ["console.log($0 ==>> {$0});"],
     "description": "console.log with construction object"
   },
   "className": {
@@ -25,7 +25,7 @@
     "description": "React useState() hook"
   },
   "useEffect": {
-    "prefix": "uef",
+    "prefix": "ue",
     "body": ["useEffect(() => {", "\t$1", "}, [$2]);$0"],
     "description": "React useEffect() hook"
   },
@@ -44,11 +44,6 @@
     "body": ["const $1 = useRef($2);$0"],
     "description": "React useRef() hook"
   },
-  "useEvent": {
-    "prefix": "uet",
-    "body": ["const $1 = useEvent(() => {", "\t$2", "});$0"],
-    "description": "React useRef() hook"
-  },
   "import from with default": {
     "prefix": "im",
     "body": ["import $1 from '$2$1';"]
@@ -57,17 +52,9 @@
     "prefix": "imo",
     "body": ["import { $1 } from '$2$1';"]
   },
-  "import react": {
-    "prefix": "imr",
-    "body": ["import * as React from 'react';$0"]
-  },
   "import react with object": {
-    "prefix": "iro",
-    "body": ["import React, { $1 } from 'react';$0"]
-  },
-  "import react-redux hooks": {
-    "prefix": "ird",
-    "body": ["import { useSelector, useDispatch } from 'react-redux';"]
+    "prefix": "imr",
+    "body": ["import { $1 } from 'react';$0"]
   },
   "import antd  with construction": {
     "prefix": "ima",
@@ -123,7 +110,7 @@
   "react component template with memo": {
     "prefix": "rctm",
     "body": [
-      "import React from 'react';",
+      "import { memo } from 'react';",
       "import styles from './index.module.less';",
       "\t\t",
       "const ${1:FC} = () => {",
@@ -133,7 +120,7 @@
       "\t\t</div>",
       "\t);",
       "};",
-      "export default React.memo(${1:FC});"
+      "export default memo(${1:FC});"
     ]
   },
   "redux component template": {
