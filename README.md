@@ -15,7 +15,7 @@ After the installation, run the following command in the JS file, CSS file, or e
 | `sty`   | `style={{ $1 }}`                                           |
 | `esp`   | `e.stopPropagation(); e.preventDefault();`                 |
 | `cus`   | `const [$1,set$1] = useState($2);`                         |
-| `uef`    | `useEffect` template                                      |
+| `ue`    | `useEffect` template                                      |
 | `uc`    | `useCallback` template                                     |
 | `um`    | `useMemo` template                                         |
 | `uf`    | `const $1 = useRef(${2:null})`                             |
@@ -53,7 +53,7 @@ export default FC;
 **rctm**
 
 ```js
-import React from 'react';
+import { memo } from 'react';
 import styles from './index.module.less';
     
 const FC = () => {
@@ -63,5 +63,5 @@ const FC = () => {
     </div>
   );
 };
-export default React.memo(FC);
+export default memo(FC);
 ```
