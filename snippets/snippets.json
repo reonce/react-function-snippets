@@ -6,7 +6,7 @@
   },
   "console.log with construction": {
     "prefix": "clo",
-    "body": ["console.log($0 ==>> {$0});"],
+    "body": ["console.log({$0});"],
     "description": "console.log with construction object"
   },
   "className": {
