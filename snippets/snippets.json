@@ -6,8 +6,8 @@
   },
   "console.log with construction": {
     "prefix": "clo",
-    "body": ["console.log({$0});"],
-    "description": "console.log with construction object"
+    "body": ["console.log('${1:first}', ${1:first})"],
+    "description": "Logs property with name."
   },
   "className": {
     "prefix": "cln",
@@ -75,12 +75,11 @@
     ]
   },
   "text ellipsis": {
-    "prefix": "els",
+    "prefix": "tow",
     "body": [
       "white-space: nowrap;",
       "text-overflow: ellipsis;",
-      "overflow: hidden;",
-      "max-width: 10em;"
+      "overflow: hidden;"
     ],
     "description": "css ellipsis"
   },
@@ -95,12 +94,12 @@
   "react component template": {
     "prefix": "rct",
     "body": [
-      "import styles from './index.module.less';",
+      "import React from 'react';",
       "\t\t",
-      "const ${1:FC} = () => {",
+      "const ${1:TM_FILENAME_BASE} = () => {",
       "\treturn (",
-      "\t\t<div className={styles.wrap}>",
-      "\t\t\t $2",
+      "\t\t<div>",
+      "\t\t\t ${$2:TM_FILENAME_BASE}",
       "\t\t</div>",
       "\t);",
       "};",
@@ -142,5 +141,21 @@
       "};",
       "export default React.memo(${1:FC});"
     ]
+  },
+  "reactFunctionalComponent": {
+    "key": "reactFunctionalComponent",
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   }
 }
